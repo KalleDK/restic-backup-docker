@@ -17,5 +17,5 @@ ARG RCLONE_VERSION=1.41
 RUN \
       wget -P /tmp https://github.com/ncw/rclone/releases/download/v${RCLONE_VERSION}/rclone-v${RCLONE_VERSION}-linux-${ARCH}.zip \
    && unzip /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}.zip -d /tmp \
-   && install -D -o root -g root -m 0755 /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}/rclone /usr/local/bin/rclone
+   && install -D -o root -g root -m 0755 /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}/rclone /usr/local/bin/rclone \
    && rm -r /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH} /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}.zip
