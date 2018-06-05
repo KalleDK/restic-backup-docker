@@ -20,5 +20,7 @@ RUN \
    && install -D -o root -g root -m 0755 /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}/rclone /usr/local/bin/rclone \
    && rm -r /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH} /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}.zip
 
-ENV XDG_CONFIG_HOME=/var/local
+ENV XDG_CONFIG_HOME=/usr/local/etc
 ENV XDG_CACHE_HOME=/var/cache
+
+VOLUME ["/usr/local/etc/rclone", "/usr/local/etc/restic", "/var/cache/restic"]
