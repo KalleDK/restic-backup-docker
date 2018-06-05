@@ -23,5 +23,6 @@ RUN \
 ENV XDG_CONFIG_HOME=/usr/local/etc
 ENV XDG_CACHE_HOME=/var/cache
 ENV RESTIC_PASSWORD_FILE=/usr/local/etc/restic/restic.key
+ENV RESTIC_REPOSITORY=/mnt/repo
 
-VOLUME ["/usr/local/etc/rclone", "/usr/local/etc/restic", "/var/cache/restic"]
+VOLUME ["/usr/local/etc/rclone", "/usr/local/etc/restic", "/var/cache/restic", "/mnt/repo"]
