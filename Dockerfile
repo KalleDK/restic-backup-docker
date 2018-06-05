@@ -19,3 +19,5 @@ RUN \
    && unzip /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}.zip -d /tmp \
    && install -D -o root -g root -m 0755 /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}/rclone /usr/local/bin/rclone \
    && rm -r /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH} /tmp/rclone-v${RCLONE_VERSION}-linux-${ARCH}.zip
+
+ENV XDG_CONFIG_HOME=/var/local
